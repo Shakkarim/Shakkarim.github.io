@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,30 +7,28 @@
   <title>Shak M.S. Karim, Ph.D.</title>
   <style>
     :root {
+      --text: #2e2e2e;
+      --muted: #6b7280;
+      --link: #2563eb;
+      --border: #e5e7eb;
       --bg: #ffffff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #5f6b7a;
-      --primary: #123a63;
-      --accent: #2a6f97;
-      --soft: #eef4f8;
-      --border: #dbe5ee;
-      --shadow: 0 10px 24px rgba(18, 58, 99, 0.06);
-      --maxw: 1120px;
+      --soft: #f8fafc;
+      --heading: #111827;
+      --maxw: 1200px;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
-      line-height: 1.65;
+      background: var(--bg);
+      line-height: 1.7;
     }
 
     a {
-      color: var(--accent);
+      color: var(--link);
       text-decoration: none;
     }
 
@@ -37,305 +36,274 @@
       text-decoration: underline;
     }
 
-    .wrap {
-      width: min(var(--maxw), calc(100% - 2rem));
-      margin: 0 auto;
-    }
-
     .topbar {
       border-bottom: 1px solid var(--border);
-      background: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background: #fff;
+    }
+
+    .topbar-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-weight: 700;
+      color: var(--heading);
+      font-size: 1rem;
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-
-    .brand {
-      font-weight: 700;
-      color: var(--primary);
-      letter-spacing: 0.02em;
-    }
-
-    .navlinks {
-      display: flex;
+      gap: 1.2rem;
       flex-wrap: wrap;
-      gap: 1rem;
     }
 
-    .navlinks a {
-      color: var(--primary);
-      font-weight: 700;
+    .nav a {
+      color: var(--heading);
+      font-weight: 500;
       font-size: 0.95rem;
     }
 
-    .hero {
-      padding: 4.2rem 0 2.8rem;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(to bottom, #ffffff, #fbfdff);
-    }
-
-    .hero-grid {
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 2rem 1.2rem 4rem;
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 1.25rem;
-      align-items: start;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
     }
 
-    .eyebrow {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
+    .sidebar {
+      position: sticky;
+      top: 1.5rem;
+      align-self: start;
     }
 
-    h1 {
-      margin: 0;
-      color: var(--primary);
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      line-height: 1.08;
-    }
-
-    .subtitle {
-      margin-top: 0.85rem;
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 760px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 1.35rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.78rem 1.05rem;
-      border-radius: 999px;
-      font-weight: 700;
+    .profile-card {
       border: 1px solid var(--border);
-      background: #fff;
-      color: var(--primary);
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 10px;
       padding: 1.2rem;
-      box-shadow: var(--shadow);
+      background: #fff;
     }
 
-    .card h3 {
+    .profile-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .name {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--heading);
+      margin: 0 0 0.25rem;
+    }
+
+    .title {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+
+    .meta {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .meta li {
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .meta strong {
+      color: var(--heading);
+    }
+
+    .main h1 {
       margin-top: 0;
-      color: var(--primary);
+      margin-bottom: 1rem;
+      color: var(--heading);
+      font-size: 2rem;
     }
 
-    section {
-      padding: 3rem 0;
+    .main p {
+      margin: 0 0 1rem;
+    }
+
+    .main ul {
+      margin-top: 0.5rem;
+      margin-bottom: 1.2rem;
+      padding-left: 1.25rem;
+    }
+
+    .main li {
+      margin-bottom: 0.45rem;
     }
 
     .section-title {
-      margin: 0 0 0.55rem;
-      color: var(--primary);
-      font-size: 1.9rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.15rem;
+      color: var(--heading);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.45rem;
     }
 
-    .section-intro {
-      margin: 0 0 1.4rem;
-      color: var(--muted);
-      max-width: 820px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .mini-title {
-      margin-bottom: 0.4rem;
-      color: var(--accent);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-    }
-
-    .pill-row {
+    .button-row {
       display: flex;
+      gap: 0.8rem;
       flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
     }
 
-    .pill {
+    .button {
+      display: inline-block;
+      padding: 0.65rem 0.95rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--heading);
+      font-weight: 500;
+    }
+
+    .button:hover {
       background: var(--soft);
-      color: var(--primary);
-      border: 1px solid #d5e3ec;
-      border-radius: 999px;
-      padding: 0.45rem 0.8rem;
-      font-weight: 700;
-      font-size: 0.9rem;
+      text-decoration: none;
     }
 
-    .news-list {
-      margin: 0;
-      padding-left: 1.1rem;
-    }
-
-    .quick-links {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .footer {
-      text-align: center;
-      color: var(--muted);
+    footer {
       border-top: 1px solid var(--border);
-      padding: 2rem 0 3rem;
-      margin-top: 1rem;
+      padding: 1.5rem 1.2rem 2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: var(--maxw);
+      margin: 0 auto;
     }
 
     @media (max-width: 900px) {
-      .hero-grid,
-      .grid-2,
-      .quick-links {
+      .container {
         grid-template-columns: 1fr;
       }
 
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
+      .sidebar {
+        position: static;
       }
     }
   </style>
 </head>
 <body>
   <div class="topbar">
-    <div class="wrap nav">
-      <div class="brand">Shak M.S. Karim, Ph.D.</div>
-      <div class="navlinks">
+    <div class="topbar-inner">
+      <div class="site-title">Shak M.S. Karim, Ph.D.</div>
+      <nav class="nav">
         <a href="index.html">Home</a>
         <a href="bio.html">Bio</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
         <a href="outreach.html">Outreach</a>
-      </div>
+      </nav>
     </div>
   </div>
 
-  <header class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Atmospheric Scientist · Radar Meteorology · Numerical Modeling</div>
-        <h1>Understanding severe weather and environmental extremes across scales</h1>
-        <p class="subtitle">
-          I am a Postdoctoral Research Associate at Hampton University’s Severe Weather Research Center.
-          My work integrates Doppler radar retrievals, large-eddy simulations, remote sensing, and
-          numerical weather prediction to investigate severe convection, turbulence, wildfire environments,
-          urban-weather interactions, and tropical cyclone processes.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="research.html">Explore Research</a>
-          <a class="btn" href="files/Shak_Karim_CV.pdf">Download CV</a>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="profile-image">
+          Add profile photo here
+          <!-- Later replace with:
+          <img src="images/profile.jpg" alt="Shak Karim">
+          -->
         </div>
-      </div>
 
-      <div class="card">
-        <h3>Latest News</h3>
-        <ul class="news-list">
-          <li>Developing a ground-based Doppler radar wind retrieval algorithm using an LES-based radar simulator framework.</li>
-          <li>Maintaining a satellite-assimilated severe weather forecasting system for regional and CONUS applications.</li>
-          <li>Advancing research on urban controls on post-landfall tropical cyclone dissipation.</li>
+        <h2 class="name">Dr. Shak M.S. Karim</h2>
+        <div class="title">Postdoctoral Research Associate</div>
+
+        <ul class="meta">
+          <li>Hampton, VA, USA</li>
+          <li>skak.karim@hamptonu.edu</li>
+          <li><a href="https://www.hamptonu.edu/" target="_blank">Hampton University</a></li>
+          <li><a href="https://cas.hamptonu.edu/facilities/severe-weather-research-center/" target="_blank">Severe Weather Research Center</a></li>
+          <li><a href="#" target="_blank">LinkedIn</a></li>
+          <li><a href="#" target="_blank">Google Scholar</a></li>
+          <li><a href="#" target="_blank">GitHub</a></li>
         </ul>
       </div>
-    </div>
-  </header>
+    </aside>
 
-  <section>
-    <div class="wrap">
-      <h2 class="section-title">About / Summary</h2>
-      <p class="section-intro">
-        This homepage is designed as a first impression page. Detailed academic content is moved to separate pages for easier navigation.
+    <main class="main">
+      <h1>Atmospheric Scientist</h1>
+
+      <p>
+        Welcome. I am an atmospheric scientist working on radar meteorology, severe weather dynamics,
+        large-eddy simulation, numerical weather prediction, and remote sensing applications. My research
+        integrates observations, theory, and high-resolution modeling to better understand multiscale
+        atmospheric processes and environmental extremes.
       </p>
 
-      <div class="grid-2">
-        <div class="card">
-          <div class="mini-title">Summary</div>
-          <p>
-            Atmospheric scientist with more than eight years of experience in multiscale numerical modeling,
-            turbulence-resolving simulations, model validation, radar and satellite remote sensing,
-            and high-performance computing. My recent work emphasizes radar-based 3D wind retrieval,
-            severe weather forecasting, urban impacts on extreme weather, and process-based atmospheric dynamics.
-          </p>
-        </div>
+      <p>
+        My current work at Hampton University focuses on Doppler radar wind retrieval, satellite-assimilated
+        severe weather forecasting, turbulence in convection, and urban impacts on post-landfall tropical
+        cyclone evolution.
+      </p>
 
-        <div class="card">
-          <div class="mini-title">Research Focus</div>
-          <p>
-            My research spans Doppler radar wind retrieval, large-eddy simulation of severe weather,
-            satellite-assimilated forecasting, wildfire meteorology, mountain meteorology,
-            and tropical cyclone interaction with complex urban and terrain environments.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Radar Meteorology</span>
-            <span class="pill">LES</span>
-            <span class="pill">Severe Convection</span>
-            <span class="pill">Forecasting</span>
-            <span class="pill">Urban Climate</span>
-            <span class="pill">Tropical Cyclones</span>
-          </div>
-        </div>
+      <div class="section-title">Research Focus</div>
+      <ul>
+        <li>Doppler radar wind retrieval and radar simulator development</li>
+        <li>Large-eddy simulation of severe convection and turbulence</li>
+        <li>Satellite-assimilated severe weather forecasting</li>
+        <li>Urban impacts on tropical cyclone dissipation</li>
+        <li>Wildfire meteorology and mountain weather dynamics</li>
+      </ul>
 
-        <div class="card">
-          <div class="mini-title">Skills</div>
-          <p>
-            Python, MATLAB, NCL, Fortran, Bash, Slurm, Git, Linux, QGIS, LaTeX, Jupyter, GrADS,
-            and HPC workflows for atmospheric modeling and data analysis.
-          </p>
-          <div class="pill-row">
-            <span class="pill">WRF-ARW</span>
-            <span class="pill">WRF-LES</span>
-            <span class="pill">MPAS-A</span>
-            <span class="pill">HYSPLIT</span>
-            <span class="pill">CM1</span>
-          </div>
-        </div>
+      <div class="section-title">Methods and Tools</div>
+      <p>
+        To investigate these problems, I use multi-Doppler radar datasets, satellite remote sensing,
+        ensemble and high-resolution numerical models including WRF-ARW, WRF-LES, MPAS-A, HYSPLIT, and CM1,
+        along with Python, MATLAB, Fortran, and high-performance computing workflows.
+      </p>
 
-        <div class="card">
-          <div class="mini-title">Quick Access</div>
-          <div class="quick-links">
-            <a class="btn" href="bio.html">View Bio</a>
-            <a class="btn" href="publications.html">View Publications</a>
-            <a class="btn" href="research.html">Research Projects</a>
-            <a class="btn" href="outreach.html">Outreach & Service</a>
-          </div>
-        </div>
+      <div class="section-title">Latest News</div>
+      <ul>
+        <li>Developing a ground-based Doppler radar algorithm to retrieve 3D winds from multi-radar platforms.</li>
+        <li>Maintaining a satellite-assimilated forecasting system for severe weather applications at SWRC.</li>
+        <li>Advancing research on tropical cyclone interaction with urban environments.</li>
+      </ul>
+
+      <div class="button-row">
+        <a class="button" href="research.html">View Research</a>
+        <a class="button" href="publications.html">View Publications</a>
+        <a class="button" href="files/Shak_Karim_CV.pdf">Download CV</a>
       </div>
-    </div>
-  </section>
-
-  <div class="footer">
-    © 2026 Shak M.S. Karim · Academic Website
+    </main>
   </div>
+
+  <footer>
+    © 2026 Shak M.S. Karim.
+  </footer>
 </body>
 </html>
+```
