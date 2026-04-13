@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shak M.S. Karim</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #2e2e2e;
+}
+
+.topbar {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+  gap: 30px;
+}
+
+.sidebar {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.main h1 {
+  margin-top: 0;
+}
+
+.section-title {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div><b>Shak M.S. Karim</b></div>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="bio.html">Bio</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="outreach.html">Outreach</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="sidebar">
+    <p><b>Dr. Shak Karim</b></p>
+    <p>Postdoctoral Research Associate</p>
+    <p>Hampton University</p>
+    <p>skak.karim@hamptonu.edu</p>
+  </div>
+
+  <div class="main">
+
+    <h1>Atmospheric Scientist</h1>
+
+    <p>
+      I work on radar meteorology, large-eddy simulation, severe convection,
+      and numerical weather prediction.
+    </p>
+
+    <div class="section-title">Research Focus</div>
+    <ul>
+      <li>Doppler radar wind retrieval</li>
+      <li>LES of severe weather</li>
+      <li>Urban-TC interaction</li>
+      <li>Satellite-assimilated forecasting</li>
+    </ul>
+
+    <div class="section-title">Methods</div>
+    <p>
+      WRF, MPAS, radar data, Python, MATLAB, HPC workflows.
+    </p>
+
+    <div class="section-title">Latest News</div>
+    <ul>
+      <li>Radar retrieval paper under review</li>
+      <li>Maintaining forecasting system</li>
+    </ul>
+
+  </div>
+
+</div>
+
+</body>
+</html>
