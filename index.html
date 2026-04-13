@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shak Md Shajedul Karim, Ph.D.</title>
+  <title>Shak M.S. Karim, Ph.D.</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -19,7 +19,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -28,8 +28,14 @@
       line-height: 1.65;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     .wrap {
       width: min(var(--maxw), calc(100% - 2rem));
@@ -37,11 +43,11 @@
     }
 
     .topbar {
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid var(--border);
     }
 
     .nav {
@@ -71,15 +77,15 @@
     }
 
     .hero {
-      padding: 4rem 0 2.5rem;
+      padding: 4.2rem 0 2.8rem;
       border-bottom: 1px solid var(--border);
       background: linear-gradient(to bottom, #ffffff, #fbfdff);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.45fr 0.85fr;
-      gap: 1.5rem;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 1.25rem;
       align-items: start;
     }
 
@@ -95,12 +101,12 @@
     h1 {
       margin: 0;
       color: var(--primary);
-      font-size: clamp(2.1rem, 5vw, 3.45rem);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
       line-height: 1.08;
     }
 
     .subtitle {
-      margin-top: 0.75rem;
+      margin-top: 0.85rem;
       color: var(--muted);
       font-size: 1.05rem;
       max-width: 760px;
@@ -110,12 +116,12 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-top: 1.3rem;
+      margin-top: 1.35rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 0.8rem 1.05rem;
+      padding: 0.78rem 1.05rem;
       border-radius: 999px;
       font-weight: 700;
       border: 1px solid var(--border);
@@ -129,7 +135,6 @@
       border-color: var(--primary);
     }
 
-    .hero-card,
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -138,7 +143,6 @@
       box-shadow: var(--shadow);
     }
 
-    .hero-card h3,
     .card h3 {
       margin-top: 0;
       color: var(--primary);
@@ -166,10 +170,13 @@
       gap: 1rem;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
+    .mini-title {
+      margin-bottom: 0.4rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
     }
 
     .pill-row {
@@ -189,81 +196,15 @@
       font-size: 0.9rem;
     }
 
-    .mini-title {
-      margin-bottom: 0.4rem;
-      color: var(--accent);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-    }
-
-    .list-clean {
+    .news-list {
       margin: 0;
       padding-left: 1.1rem;
     }
 
-    .timeline {
+    .quick-links {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
-    }
-
-    .timeline-item {
-      border-left: 4px solid #d5e3ec;
-      padding-left: 1rem;
-    }
-
-    .timeline-item h4 {
-      margin: 0 0 0.2rem;
-      color: var(--primary);
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .research-block {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .research-item {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 1rem;
-      align-items: center;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 1rem;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    .image-placeholder {
-      min-height: 220px;
-      border: 2px dashed #c4d7e4;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--muted);
-      background: #fbfdff;
-      padding: 1rem;
-    }
-
-    .pub-list {
-      display: grid;
-      gap: 0.8rem;
-    }
-
-    .pub-item {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 0.95rem 1rem;
-      background: #fff;
     }
 
     .footer {
@@ -271,14 +212,13 @@
       color: var(--muted);
       border-top: 1px solid var(--border);
       padding: 2rem 0 3rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
 
     @media (max-width: 900px) {
       .hero-grid,
       .grid-2,
-      .grid-3,
-      .research-item {
+      .quick-links {
         grid-template-columns: 1fr;
       }
 
@@ -294,37 +234,38 @@
     <div class="wrap nav">
       <div class="brand">Shak M.S. Karim, Ph.D.</div>
       <div class="navlinks">
-        <a href="#home">Home</a>
-        <a href="#bio">Bio</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#outreach">Outreach</a>
+        <a href="index.html">Home</a>
+        <a href="bio.html">Bio</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="outreach.html">Outreach</a>
       </div>
     </div>
   </div>
 
-  <header class="hero" id="home">
+  <header class="hero">
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Atmospheric Scientist · Radar Meteorology · Numerical Modeling</div>
         <h1>Understanding severe weather and environmental extremes across scales</h1>
         <p class="subtitle">
           I am a Postdoctoral Research Associate at Hampton University’s Severe Weather Research Center.
-          My work integrates multi-Doppler radar retrievals, large-eddy simulations, numerical weather prediction,
-          and remote sensing to investigate severe convection, turbulence, urban-weather interactions,
-          wildfire environments, and tropical cyclone processes.
+          My work integrates Doppler radar retrievals, large-eddy simulations, remote sensing, and
+          numerical weather prediction to investigate severe convection, turbulence, wildfire environments,
+          urban-weather interactions, and tropical cyclone processes.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#research">View Research</a>
+          <a class="btn btn-primary" href="research.html">Explore Research</a>
           <a class="btn" href="files/Shak_Karim_CV.pdf">Download CV</a>
         </div>
       </div>
-      <div class="hero-card">
+
+      <div class="card">
         <h3>Latest News</h3>
-        <ul class="list-clean">
-          <li>Ongoing development of a ground-based Doppler radar wind retrieval algorithm using an LES-based radar simulator framework.</li>
-          <li>Maintaining a satellite-assimilated forecasting system for CONUS and Hampton Roads applications.</li>
-          <li>Current proposal and research work on how urban environments influence tropical cyclone dissipation.</li>
+        <ul class="news-list">
+          <li>Developing a ground-based Doppler radar wind retrieval algorithm using an LES-based radar simulator framework.</li>
+          <li>Maintaining a satellite-assimilated severe weather forecasting system for regional and CONUS applications.</li>
+          <li>Advancing research on urban controls on post-landfall tropical cyclone dissipation.</li>
         </ul>
       </div>
     </div>
@@ -332,31 +273,44 @@
 
   <section>
     <div class="wrap">
-      <h2 class="section-title">Home</h2>
+      <h2 class="section-title">About / Summary</h2>
       <p class="section-intro">
-        This front page is organized around the first-impression content you asked for: a short summary, research focus, skills, and latest news.
+        This homepage is designed as a first impression page. Detailed academic content is moved to separate pages for easier navigation.
       </p>
+
       <div class="grid-2">
         <div class="card">
-          <div class="mini-title">About / Summary</div>
+          <div class="mini-title">Summary</div>
           <p>
             Atmospheric scientist with more than eight years of experience in multiscale numerical modeling,
-            turbulence-resolving simulations, radar and satellite remote sensing, model validation, and HPC workflows.
-            Recent work emphasizes Doppler radar wind retrieval, severe weather forecasting, urban impacts on extreme weather,
-            and process-level understanding of atmospheric dynamics.
+            turbulence-resolving simulations, model validation, radar and satellite remote sensing,
+            and high-performance computing. My recent work emphasizes radar-based 3D wind retrieval,
+            severe weather forecasting, urban impacts on extreme weather, and process-based atmospheric dynamics.
           </p>
         </div>
+
         <div class="card">
           <div class="mini-title">Research Focus</div>
           <p>
-            Multi-Doppler radar retrievals · LES of severe convection · Satellite-assimilated forecasting ·
-            TC-urban interaction · wildfire meteorology · mountain meteorology · remote sensing.
+            My research spans Doppler radar wind retrieval, large-eddy simulation of severe weather,
+            satellite-assimilated forecasting, wildfire meteorology, mountain meteorology,
+            and tropical cyclone interaction with complex urban and terrain environments.
           </p>
+          <div class="pill-row">
+            <span class="pill">Radar Meteorology</span>
+            <span class="pill">LES</span>
+            <span class="pill">Severe Convection</span>
+            <span class="pill">Forecasting</span>
+            <span class="pill">Urban Climate</span>
+            <span class="pill">Tropical Cyclones</span>
+          </div>
         </div>
+
         <div class="card">
           <div class="mini-title">Skills</div>
           <p>
-            Python, MATLAB, NCL, Fortran, Bash, Slurm, Git, Linux, QGIS, LaTeX, Jupyter, and advanced HPC workflows.
+            Python, MATLAB, NCL, Fortran, Bash, Slurm, Git, Linux, QGIS, LaTeX, Jupyter, GrADS,
+            and HPC workflows for atmospheric modeling and data analysis.
           </p>
           <div class="pill-row">
             <span class="pill">WRF-ARW</span>
@@ -366,175 +320,22 @@
             <span class="pill">CM1</span>
           </div>
         </div>
-        <div class="card">
-          <div class="mini-title">Latest News</div>
-          <p>Radar retrieval manuscript under review, active severe weather forecasting operations at SWRC, and ongoing TC-urban proposal development.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="bio">
-    <div class="wrap">
-      <h2 class="section-title">Bio</h2>
-      <p class="section-intro">
-        A compact professional overview modeled after the clean academic structure of the example site, but expanded to fit your CV-based academic profile.
-      </p>
-      <div class="grid-3">
         <div class="card">
-          <h3>Education</h3>
-          <ul class="list-clean">
-            <li>Ph.D. in Atmospheric Science, North Carolina A&T State University</li>
-            <li>M.S. in Physics, University of Chittagong</li>
-            <li>B.Sc. (Hons.) in Physics, University of Chittagong</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Professional Appointments</h3>
-          <ul class="list-clean">
-            <li>Postdoctoral Research Associate, Hampton University</li>
-            <li>Postdoctoral Research Associate, North Carolina A&T State University</li>
-            <li>Adjunct Faculty, North Carolina A&T State University</li>
-            <li>Research Assistant, North Carolina A&T State University</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Honors and Awards</h3>
-          <ul class="list-clean">
-            <li>NCAT Outstanding Senior Graduate Teaching Assistant Award</li>
-            <li>Outstanding Poster Presentation Award, MSCAR</li>
-            <li>USDA Forest Service & NCAT Doctoral Summer Intern Fellowship</li>
-            <li>Sweden-Bangladesh Trust Fund Fellowship</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="research">
-    <div class="wrap">
-      <h2 class="section-title">Research</h2>
-      <p class="section-intro">
-        This section is set up for the four research topics you listed. Each block has room for a short explanation and one figure or conceptual diagram.
-      </p>
-
-      <div class="research-block">
-        <div class="research-item">
-          <div>
-            <div class="mini-title">Current Project</div>
-            <h3>Doppler radar wind retrieval algorithm</h3>
-            <p>
-              Developing a ground-based dual- and multi-Doppler radar algorithm to retrieve three-dimensional winds and diagnose turbulence structures in convection.
-              This project combines synthetic radar observations, weighted wind retrieval, and large-eddy simulation truth fields.
-            </p>
+          <div class="mini-title">Quick Access</div>
+          <div class="quick-links">
+            <a class="btn" href="bio.html">View Bio</a>
+            <a class="btn" href="publications.html">View Publications</a>
+            <a class="btn" href="research.html">Research Projects</a>
+            <a class="btn" href="outreach.html">Outreach & Service</a>
           </div>
-          <div class="image-placeholder">Add flow-chart diagram here</div>
-        </div>
-
-        <div class="research-item">
-          <div>
-            <div class="mini-title">Forecasting Operations</div>
-            <h3>Satellite-assimilated forecasting system</h3>
-            <p>
-              Maintaining and improving a severe weather forecasting system that assimilates combined polar hyperspectral sounding and ABI retrievals into a GSI-WRF framework.
-              Add your workflow figure and link both the workflow PDF and the live forecast page here.
-            </p>
-            <p>
-              <a href="https://cas.hamptonu.edu/~shak.karim/HU%20Forecasting%20System.pdf" target="_blank">Workflow PDF</a><br>
-              <a href="https://cas.hamptonu.edu/facilities/severe-weather-research-center/forecast/" target="_blank">Live Forecast Page</a>
-            </p>
-          </div>
-          <div class="image-placeholder">Add workflow figure or domain image here</div>
-        </div>
-
-        <div class="research-item">
-          <div>
-            <div class="mini-title">Ph.D. Dissertation</div>
-            <h3>Dynamics of orographic effects on mesoscale environments</h3>
-            <p>
-              Briefly summarize the dissertation here, emphasizing terrain effects on extreme weather,
-              wildfire-conducive environments, heavy rainfall, and tropical cyclone track deflection.
-              This block is ready for one key image from your dissertation work.
-            </p>
-          </div>
-          <div class="image-placeholder">Add dissertation figure here</div>
-        </div>
-
-        <div class="research-item">
-          <div>
-            <div class="mini-title">Current Proposal Direction</div>
-            <h3>Tropical cyclone and urban interaction</h3>
-            <p>
-              Investigating how urban morphology, roughness, thermal properties, and building-scale turbulence influence post-landfall tropical cyclone dissipation.
-              This block is intended for a conceptual figure or coupled modeling workflow diagram.
-            </p>
-          </div>
-          <div class="image-placeholder">Add TC-urban conceptual diagram here</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="wrap">
-      <h2 class="section-title">Publications</h2>
-      <p class="section-intro">
-        Organized the way you requested: peer-reviewed journal articles, invited talks, and conference presentations.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Peer-Reviewed Journal</h3>
-          <div class="pub-list">
-            <div class="pub-item">Karim et al. (2026). Developing a Wind Retrieval Algorithm Using Multi-Doppler Radar Platforms to Examine Turbulence Wind Structures in Convection. <em>Atmospheric Measurement Techniques</em>, under review.</div>
-            <div class="pub-item">Karim et al. (2025). Urban Impacts on Convective Squall Lines over Chicago in the Warm Season – Part II. <em>Atmosphere</em>.</div>
-            <div class="pub-item">Kaplan, Karim, and Lin (2025). Urban Impacts on Convective Squall Lines over Chicago in the Warm Season – Part I. <em>Atmosphere</em>.</div>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Invited Talks</h3>
-          <div class="pub-list">
-            <div class="pub-item">Ground-based dual-Doppler Radar Algorithm Development and Satellite Data Assimilation for Severe Weather Applications. NASA Langley, 2025.</div>
-            <div class="pub-item">Parallel Approaches Towards Radar Algorithm Development and Satellite Data Assimilation for Severe Weather Applications. Hampton University, 2025.</div>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Conference Presentations</h3>
-          <div class="pub-list">
-            <div class="pub-item">41st International Conference on Radar Meteorology, 2025.</div>
-            <div class="pub-item">36th Conference on Hurricanes and Tropical Meteorology, 2024.</div>
-            <div class="pub-item">20th AMS Conference on Mesoscale Processes, 2023.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="outreach">
-    <div class="wrap">
-      <h2 class="section-title">Outreach</h2>
-      <p class="section-intro">
-        This section is ready for community engagement, mentoring, tutorials, judging, reviewing, and service.
-      </p>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Mentoring and Teaching Support</h3>
-          <p>
-            Mentored undergraduate atmospheric science students, helped guide research presentations,
-            and contributed to WRF and numerical weather prediction tutorials.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Professional and Community Service</h3>
-          <p>
-            Peer review, proposal review, conference judging, and public-facing outreach through weather and science events.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
   <div class="footer">
-    © 2026 Shak M.S. Karim · Starter academic website based on a clean research-group style layout.
+    © 2026 Shak M.S. Karim · Academic Website
   </div>
 </body>
 </html>
