@@ -56,6 +56,7 @@
       font-size: 12px;
       color: #555;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .brand-logo img {
@@ -90,6 +91,10 @@
       color: #111;
     }
 
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
     /* Hero image */
     .hero {
       width: 100%;
@@ -112,6 +117,18 @@
       display: block;
     }
 
+    .hero-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 24px;
+      text-align: center;
+      padding: 20px;
+    }
+
     .hero-caption {
       position: absolute;
       bottom: 8px;
@@ -119,7 +136,7 @@
       font-size: 15px;
       font-weight: 700;
       color: #111;
-      background: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.65);
       padding: 4px 8px;
     }
 
@@ -132,7 +149,7 @@
       align-items: start;
     }
 
-    /* Left profile card */
+    /* Left profile section */
     .sidebar {
       padding-top: 8px;
     }
@@ -167,24 +184,40 @@
       color: #444;
     }
 
+    /* Sidebar info list with icon + text */
     .info-list {
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 14px;
-      color: #444;
     }
 
     .info-list li {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .info-list li,
+    .info-list li a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #4a4a4a;
+      font-size: 16px;
       line-height: 1.4;
+      text-decoration: none;
     }
 
-    .info-list strong {
-      color: #111;
+    .info-list li a:hover {
+      text-decoration: underline;
     }
 
-    /* Main text */
+    .info-list svg {
+      width: 28px;
+      height: 28px;
+      fill: #4a4a4a;
+      flex-shrink: 0;
+    }
+
+    /* Right main text */
     .main-text {
       max-width: 860px;
     }
@@ -223,15 +256,24 @@
 
     .footer-links {
       display: flex;
-      gap: 26px;
+      gap: 18px;
       flex-wrap: wrap;
-      font-size: 15px;
-      font-weight: 700;
+      align-items: center;
       margin-bottom: 8px;
     }
 
     .footer-links a {
       color: #fff;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .footer-links img {
+      width: 20px;
+      height: 20px;
+      display: block;
+      filter: invert(1);
     }
 
     .footer-copy {
@@ -287,9 +329,8 @@
     <header class="topbar">
       <div class="brand">
         <div class="brand-logo">
-          <!-- Replace with your lab/logo image -->
           Logo
-          <!-- Example later:
+          <!-- Replace later with:
           <img src="images/logo.png" alt="Logo">
           -->
         </div>
@@ -312,11 +353,10 @@
     <!-- Hero image -->
     <section class="hero">
       <div class="hero-box">
-        <!-- Replace with your own main banner image -->
-        <!-- Example later:
+        <!-- Replace later with:
         <img src="images/hero.jpg" alt="Main research image">
         -->
-        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#666;font-size:24px;">
+        <div class="hero-placeholder">
           Add your large banner image here
         </div>
         <div class="hero-caption">Your image caption goes here</div>
@@ -329,8 +369,7 @@
       <!-- Left profile section -->
       <aside class="sidebar">
         <div class="profile-photo">
-          <!-- Replace with your profile image -->
-          <!-- Example later:
+          <!-- Replace later with:
           <img src="images/profile.jpg" alt="Shak Karim">
           -->
         </div>
@@ -339,10 +378,39 @@
         <p class="position">Research Associate</p>
 
         <ul class="info-list">
-          <li><strong>Location:</strong> Hampton, VA, USA</li>
-          <li><strong>Email:</strong> <a href="mailto:skak.karim@hamptonu.edu">skak.karim@hamptonu.edu</a></li>
-          <li><strong>Affiliation:</strong> <a href="https://cas.hamptonu.edu/facilities/severe-weather-research-center/" target="_blank">Severe Weather Research Center</a></li>
-          <li><strong>Institution:</strong> Hampton University</li>          
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22s7-7.2 7-13a7 7 0 1 0-14 0c0 5.8 7 13 7 13zm0-9.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/>
+            </svg>
+            <span>Hampton, VA, USA</span>
+          </li>
+
+          <li>
+            <a href="mailto:skak.karim@hamptonu.edu">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.5l9 6 9-6V7H3zm18 10V9.7l-8.4 5.6a1 1 0 0 1-1.2 0L3 9.7V17h18z"/>
+              </svg>
+              <span>skak.karim@hamptonu.edu</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://cas.hamptonu.edu/facilities/severe-weather-research-center/" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a3 3 0 1 1 4.2 4.2l-2.1 2.1a1 1 0 1 1-1.4-1.4l2.1-2.1a1 1 0 1 0-1.4-1.4L11.9 13a1 1 0 0 1-1.3.1zm2.8-2.8a1 1 0 0 1 0 1.4L10 15.4a3 3 0 1 1-4.2-4.2l2.1-2.1a1 1 0 1 1 1.4 1.4l-2.1 2.1a1 1 0 0 0 1.4 1.4l3.4-3.4a1 1 0 0 1 1.4 0z"/>
+              </svg>
+              <span>Severe Weather Research Center</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.hamptonu.edu/" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a3 3 0 1 1 4.2 4.2l-2.1 2.1a1 1 0 1 1-1.4-1.4l2.1-2.1a1 1 0 1 0-1.4-1.4L11.9 13a1 1 0 0 1-1.3.1zm2.8-2.8a1 1 0 0 1 0 1.4L10 15.4a3 3 0 1 1-4.2-4.2l2.1-2.1a1 1 0 1 1 1.4 1.4l-2.1 2.1a1 1 0 0 0 1.4 1.4l3.4-3.4a1 1 0 0 1 1.4 0z"/>
+              </svg>
+              <span>Hampton University</span>
+            </a>
+          </li>
         </ul>
       </aside>
 
@@ -357,7 +425,7 @@
         </p>
 
         <p>
-          My current research includes:
+          My current work includes:
         </p>
 
         <ul>
@@ -368,28 +436,27 @@
         </ul>
 
         <p>
-          To better understand complex, multi-scale atmospheric processes, I use a variety of datasets
-          and methods including radar observations, satellite retrievals, high-resolution numerical models.
+          I use a combination of atmospheric observations, model output, and high-resolution numerical tools to better understand multi-scale weather processes and support real-time forecasting applications.
         </p>
       </div>
     </section>
 
     <!-- Footer -->
-<footer class="footer">
-  <div class="footer-links">
-    <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&hl=en" target="_blank" aria-label="Google Scholar" title="Google Scholar">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
-    </a>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&hl=en" target="_blank" aria-label="Google Scholar" title="Google Scholar">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
+        </a>
 
-    <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
-    </a>
-  </div>
+        <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+      </div>
 
-  <div class="footer-copy">
-    © 2026 Shak Md Shajedul Karim.
-  </div>
-</footer>
+      <div class="footer-copy">
+        © 2026 Shak Md Shajedul Karim.
+      </div>
+    </footer>
 
   </div>
 </body>
