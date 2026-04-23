@@ -1,114 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shak M.S. Karim</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shak Md Shajedul Karim, Ph.D.</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #2e2e2e;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f3f3;
+      color: #222;
+    }
 
-.topbar {
-  border-bottom: 1px solid #ddd;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-.nav a {
-  margin-left: 15px;
-  text-decoration: none;
-  color: black;
-}
+    .page {
+      max-width: 1600px;
+      margin: 0 auto;
+      background: #f3f3f3;
+    }
 
-.container {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px 20px;
-  gap: 30px;
-}
+    /* Top header */
+    .topbar {
+      background: #f3f3f3;
+      border-bottom: 1px solid #d7d7d7;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.sidebar {
-  border: 1px solid #ddd;
-  padding: 15px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.main h1 {
-  margin-top: 0;
-}
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #d9d9d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #555;
+      overflow: hidden;
+    }
 
-.section-title {
-  margin-top: 25px;
-  font-weight: bold;
-}
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-@media (max-width: 800px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+    .brand-text h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .brand-text p {
+      margin: 3px 0 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 20px;
+    }
+
+    .nav a {
+      color: #111;
+    }
+
+    /* Hero image */
+    .hero {
+      width: 100%;
+      padding: 0 12px;
+      margin-top: 6px;
+    }
+
+    .hero-box {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      overflow: hidden;
+      background: #d9d9d9;
+    }
+
+    .hero-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+      background: rgba(255,255,255,0.6);
+      padding: 4px 8px;
+    }
+
+    /* Main content */
+    .content {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 40px;
+      padding: 28px 70px 40px 70px;
+      align-items: start;
+    }
+
+    /* Left profile card */
+    .sidebar {
+      padding-top: 8px;
+    }
+
+    .profile-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #dadada;
+      background: #dcdcdc;
+      margin-bottom: 18px;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sidebar h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .sidebar .position {
+      margin: 0 0 20px;
+      font-size: 15px;
+      color: #444;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .info-list li {
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .info-list strong {
+      color: #111;
+    }
+
+    /* Main text */
+    .main-text {
+      max-width: 860px;
+    }
+
+    .main-text h1 {
+      margin: 0 0 10px;
+      font-size: 64px;
+      text-align: center;
+      font-weight: 800;
+      color: #000;
+    }
+
+    .main-text p {
+      margin: 0 0 18px;
+      font-size: 19px;
+      line-height: 1.45;
+    }
+
+    .main-text ul {
+      margin: 10px 0 18px 24px;
+      padding: 0 0 0 18px;
+      font-size: 19px;
+      line-height: 1.45;
+    }
+
+    .main-text li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #000;
+      color: #fff;
+      padding: 18px 70px 16px 70px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: #fff;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+      color: #f1f1f1;
+    }
+
+    @media (max-width: 1100px) {
+      .content {
+        grid-template-columns: 1fr;
+        padding: 28px 24px 40px 24px;
+      }
+
+      .main-text h1 {
+        text-align: left;
+        font-size: 46px;
+      }
+
+      .footer {
+        padding: 18px 24px 16px 24px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 16px;
+      }
+
+      .nav {
+        gap: 18px;
+        font-size: 18px;
+      }
+
+      .hero-box {
+        height: 300px;
+      }
+
+      .main-text h1 {
+        font-size: 38px;
+      }
+
+      .main-text p,
+      .main-text ul {
+        font-size: 17px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="page">
 
-<div class="topbar">
-  <div><b>Shak M.S. Karim</b></div>
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="bio.html">Bio</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="outreach.html">Outreach</a>
+    <!-- Top header -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-logo">
+          <!-- Replace with your lab/logo image -->
+          Logo
+          <!-- Example later:
+          <img src="images/logo.png" alt="Logo">
+          -->
+        </div>
+
+        <div class="brand-text">
+          <h1>Shak Md Shajedul Karim (Ph.D.)</h1>
+          <p>Atmospheric Science · Radar Meteorology · Severe Weather Research</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="bio.html">Bio</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="outreach.html">Outreach</a>
+      </nav>
+    </header>
+
+    <!-- Hero image -->
+    <section class="hero">
+      <div class="hero-box">
+        <!-- Replace with your own main banner image -->
+        <!-- Example later:
+        <img src="images/hero.jpg" alt="Main research image">
+        -->
+        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#666;font-size:24px;">
+          Add your large banner image here
+        </div>
+        <div class="hero-caption">Your image caption goes here</div>
+      </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Left profile section -->
+      <aside class="sidebar">
+        <div class="profile-photo">
+          <!-- Replace with your profile image -->
+          <!-- Example later:
+          <img src="images/profile.jpg" alt="Shak Karim">
+          -->
+        </div>
+
+        <h2>Dr. Shak Md Shajedul Karim</h2>
+        <p class="position">Research Associate</p>
+
+        <ul class="info-list">
+          <li><strong>Location:</strong> Hampton, VA, USA</li>
+          <li><strong>Email:</strong> <a href="mailto:skak.karim@hamptonu.edu">skak.karim@hamptonu.edu</a></li>
+          <li><strong>Affiliation:</strong> <a href="https://cas.hamptonu.edu/facilities/severe-weather-research-center/" target="_blank">Severe Weather Research Center</a></li>
+          <li><strong>Institution:</strong> Hampton University</li>          
+        </ul>
+      </aside>
+
+      <!-- Right welcome text -->
+      <div class="main-text">
+        <h1>Welcome!</h1>
+
+        <p>
+          Hi there! I am an atmospheric scientist working on radar meteorology, severe weather dynamics,
+          large-eddy simulation, numerical weather prediction, and remote sensing applications. My research
+          focuses on understanding high-impact atmospheric processes across multiple scales.
+        </p>
+
+        <p>
+          My current research includes:
+        </p>
+
+        <ul>
+          <li>Doppler radar wind retrieval and radar simulator development</li>
+          <li>Satellite-assimilated severe weather forecasting</li>
+          <li>Tropical cyclone and urban interaction</li>
+          <li>Large-eddy simulation of convection and turbulence</li>
+        </ul>
+
+        <p>
+          To better understand complex, multi-scale atmospheric processes, I use a variety of datasets
+          and methods including radar observations, satellite retrievals, high-resolution numerical models.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&hl=en" target="_blank" aria-label="Google Scholar" title="Google Scholar">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
+    </a>
+
+    <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+    </a>
   </div>
-</div>
 
-<div class="container">
-
-  <div class="sidebar">
-    <p><b>Dr. Shak Karim</b></p>
-    <p>Postdoctoral Research Associate</p>
-    <p>Hampton University</p>
-    <p>skak.karim@hamptonu.edu</p>
+  <div class="footer-copy">
+    © 2026 Shak Md Shajedul Karim.
   </div>
-
-  <div class="main">
-
-    <h1>Atmospheric Scientist</h1>
-
-    <p>
-      I work on radar meteorology, large-eddy simulation, severe convection,
-      and numerical weather prediction.
-    </p>
-
-    <div class="section-title">Research Focus</div>
-    <ul>
-      <li>Doppler radar wind retrieval</li>
-      <li>LES of severe weather</li>
-      <li>Urban-TC interaction</li>
-      <li>Satellite-assimilated forecasting</li>
-    </ul>
-
-    <div class="section-title">Methods</div>
-    <p>
-      WRF, MPAS, radar data, Python, MATLAB, HPC workflows.
-    </p>
-
-    <div class="section-title">Latest News</div>
-    <ul>
-      <li>Radar retrieval paper under review</li>
-      <li>Maintaining forecasting system</li>
-    </ul>
+</footer>
 
   </div>
-
-</div>
-
 </body>
 </html>
