@@ -27,7 +27,6 @@
       background: #f3f3f3;
     }
 
-    /* Top header */
     .topbar {
       background: #f3f3f3;
       border-bottom: 1px solid #d7d7d7;
@@ -49,14 +48,9 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: #d9d9d9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: #555;
       overflow: hidden;
       flex-shrink: 0;
+      background: #d9d9d9;
     }
 
     .brand-logo img {
@@ -95,7 +89,6 @@
       text-decoration: underline;
     }
 
-    /* Hero image */
     .hero {
       width: 100%;
       padding: 0 12px;
@@ -117,18 +110,6 @@
       display: block;
     }
 
-    .hero-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      font-size: 24px;
-      text-align: center;
-      padding: 20px;
-    }
-
     .hero-caption {
       position: absolute;
       bottom: 8px;
@@ -140,7 +121,6 @@
       padding: 4px 8px;
     }
 
-    /* Main content */
     .content {
       display: grid;
       grid-template-columns: 300px 1fr;
@@ -149,7 +129,6 @@
       align-items: start;
     }
 
-    /* Left profile section */
     .sidebar {
       padding-top: 8px;
     }
@@ -184,7 +163,6 @@
       color: #444;
     }
 
-    /* Sidebar info list with icon + text */
     .info-list {
       list-style: none;
       padding: 0;
@@ -217,7 +195,6 @@
       flex-shrink: 0;
     }
 
-    /* Right main text */
     .main-text {
       max-width: 860px;
     }
@@ -247,7 +224,6 @@
       margin-bottom: 8px;
     }
 
-    /* Footer */
     .footer {
       background: #000;
       color: #fff;
@@ -263,17 +239,18 @@
     }
 
     .footer-links a {
-      color: #fff;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       text-decoration: none;
     }
 
     .footer-links img {
-      width: 20px;
-      height: 20px;
+      height: 26px;
+      width: auto;
       display: block;
-      filter: invert(1);
+      object-fit: contain;
+      background: transparent;
     }
 
     .footer-copy {
@@ -325,19 +302,15 @@
 <body>
   <div class="page">
 
-    <!-- Top header -->
     <header class="topbar">
       <div class="brand">
         <div class="brand-logo">
-          Logo
-          <!-- Replace later with:
-          <img src="images/logo.png" alt="Logo">
-          -->
+          <img src="images/Severe-weather-Icon.jpg" alt="Logo">
         </div>
 
         <div class="brand-text">
           <h1>Shak Md Shajedul Karim (Ph.D.)</h1>
-          <p>Atmospheric Science · Radar Meteorology · Severe Weather Research</p>
+          <p>Atmospheric Scientist · Radar Meteorology · Severe Weather Research</p>
         </div>
       </div>
 
@@ -350,28 +323,17 @@
       </nav>
     </header>
 
-    <!-- Hero image -->
     <section class="hero">
       <div class="hero-box">
-        <!-- Replace later with:
-        <img src="images/hero.jpg" alt="Main research image">
-        -->
-        <div class="hero-placeholder">
-          Add your large banner image here
-        </div>
+        <img src="images/KH-Instability.jpg" alt="Main research image">
         <div class="hero-caption">Your image caption goes here</div>
       </div>
     </section>
 
-    <!-- Main content -->
     <section class="content">
-
-      <!-- Left profile section -->
       <aside class="sidebar">
         <div class="profile-photo">
-          <!-- Replace later with:
-          <img src="images/profile.jpg" alt="Shak Karim">
-          -->
+          <img src="images/Icon-Image.jpg" alt="Shak Karim">
         </div>
 
         <h2>Dr. Shak Md Shajedul Karim</h2>
@@ -414,7 +376,6 @@
         </ul>
       </aside>
 
-      <!-- Right welcome text -->
       <div class="main-text">
         <h1>Welcome!</h1>
 
@@ -436,20 +397,23 @@
         </ul>
 
         <p>
-          I use a combination of atmospheric observations, model output, and high-resolution numerical tools to better understand multi-scale weather processes and support real-time forecasting applications.
+          To better understand complex, multi-scale weather processes and support real-time forecasting applications, I use a variety of datasets and methods including high-resolution numerical models, atmospheric observations, radar and satellite remote sensing.
         </p>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="footer-links">
-        <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&hl=en" target="_blank" aria-label="Google Scholar" title="Google Scholar">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
+        <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&hl=en" target="_blank" title="Google Scholar">
+          <img src="images/Google-scholar.png" alt="Google Scholar">
         </a>
 
-        <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" title="LinkedIn">
+          <img src="images/LinkedIn_logo.png.webp" alt="LinkedIn">
+        </a>
+
+        <a href="https://orcid.org/0000-0002-1100-3632" target="_blank" title="ORCID">
+          <img src="images/ORCID_iD.svg.png" alt="ORCID">
         </a>
       </div>
 
