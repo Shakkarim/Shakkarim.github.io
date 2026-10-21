@@ -212,3 +212,12 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 6px; line-height:
 /* Cards inside grids use the grid gap instead of their own bottom margin */
 .two-col > .card { margin-bottom: 0; }
 .two-col { margin-bottom: 22px; }
+
+/* Research cards: text gets more room, figures stay compact */
+.project { grid-template-columns: 3fr 2fr; }
+.project figure img { width: auto; max-width: 100%; max-height: 250px; margin: 0 auto; }
+.fig-stack:has(figure + figure) { grid-template-columns: 1fr 1fr; }
+.fig-stack:has(figure + figure) figure img { max-height: 220px; }
+@media (max-width: 1100px) { .project { grid-template-columns: 1fr; } }
+.fig-stack:has(figure + figure) figure img { width: auto; }
+.project figcaption { text-align: center; }
