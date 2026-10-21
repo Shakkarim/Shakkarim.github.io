@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research · Shak Md Shajedul Karim, Ph.D.</title>
+  <meta name="description" content="Research projects: TEPS ensemble forecasting, Doppler radar wind retrieval, LES, tropical cyclone–urban interaction, fire weather." />
+  <link rel="icon" href="images/Severe-weather-Icon.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <div class="brand-logo">
+          <img src="images/Severe-weather-Icon.jpg" alt="Severe weather logo">
+        </div>
+        <div class="brand-text">
+          <h1>Shak Md Shajedul Karim (Ph.D.)</h1>
+          <p>Atmospheric Scientist · Severe Weather Researcher · Numerical Modeler</p>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="bio.html">Bio</a>
+        <a href="research.html" class="active" aria-current="page">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="outreach.html">Outreach</a>
+      </nav>
+    </header>
+
+    <section class="page-head">
+      <h1>Research</h1>
+      <p>I study multiscale severe-weather processes with high-resolution numerical models, radar and satellite observations, and build forecasting systems that turn that science into operational guidance.</p>
+    </section>
+
+    <main class="wrap">
+      <section class="section">
+        <h2><span>Current &amp; recent projects</span></h2>
+
+        <article class="card">
+          <div class="project text-only">
+            <div>
+              <h3>Texas Ensemble Prediction System (TEPS)</h3>
+              <p class="meta">National Wind Institute, Texas Tech University · 2026 – present</p>
+              <p>TEPS is a 100-member, 2-km convection-allowing WRF ensemble that produces 48-hour severe-weather forecasts for Texas. I develop and maintain the system and lead its move from a fully validated retrospective configuration into real-time operations, including the operational driver, run scheduling, and Slurm/cron job orchestration on HPC.</p>
+<p>I also built the TEPS forecast products and deployed the product website: ensemble-mean, probabilistic and neighborhood-probability fields, paintball and plume displays, soundings, and member-level views. The products are presented to NWS forecasters, emergency managers, and partner institutions to show which are ready for operational use.</p>
+              <div class="tags"><span>Convection-allowing ensembles</span><span>WRF</span><span>Probabilistic forecasting</span><span>HPC operations</span><span>Forecast products</span></div>
+            </div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <div class="project">
+            <div>
+              <h3>Multi-Doppler radar wind retrieval for turbulent convection</h3>
+              <p class="meta">Severe Weather Research Center, Hampton University · 2024 – 2026</p>
+              <p>I developed a ground-based multi-Doppler wind retrieval algorithm to resolve turbulent wind structure inside convection. The algorithm is tested within an LES-based radar simulator framework, where retrieved winds can be compared directly against the known model truth, and retrieval errors and uncertainty are quantified.</p>
+<p>This work is published in <em>Remote Sensing</em> (2026) and supports observation of severe weather with the Skyler-II phased-array radar.</p>
+              <div class="tags"><span>Doppler radar</span><span>Wind retrieval</span><span>Radar simulator</span><span>Uncertainty quantification</span></div>
+            </div>
+            <div class="fig-stack"><figure><img src="images/radar-retrieval-flowchart.png" alt="Retrieval framework: from LES truth to simulated radar observations and retrieved winds." loading="lazy"><figcaption>Retrieval framework: from LES truth to simulated radar observations and retrieved winds.</figcaption></figure>
+<figure><img src="images/multi-doppler-layout.png" alt="Multi-Doppler radar layout used in the retrieval experiments." loading="lazy"><figcaption>Multi-Doppler radar layout used in the retrieval experiments.</figcaption></figure></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="project">
+            <div>
+              <h3>Large-eddy simulation of convection and boundary-layer turbulence</h3>
+              <p class="meta">Severe Weather Research Center, Hampton University · 2024 – 2026</p>
+              <p>High-resolution LES experiments resolve boundary-layer turbulence and convective eddies, providing the turbulent fields that drive the radar simulator and a testbed for how well turbulence statistics such as TKE can be recovered from radar observations.</p>
+              <div class="tags"><span>WRF-LES</span><span>Turbulence</span><span>TKE</span></div>
+            </div>
+            <div class="fig-stack"><figure><img src="images/les-tke-profile.png" alt="Vertical profile of turbulent kinetic energy from the LES experiments." loading="lazy"><figcaption>Vertical profile of turbulent kinetic energy from the LES experiments.</figcaption></figure></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="project">
+            <div>
+              <h3>Satellite-assimilated severe-weather forecasting</h3>
+              <p class="meta">Severe Weather Research Center, Hampton University · 2024 – 2026</p>
+              <p>I operated and upgraded a real-time, satellite-assimilated severe-weather forecasting system, building forecast-oriented workflows in Python, Bash, and Slurm on HPC resources.</p>
+              <div class="tags"><span>Data assimilation</span><span>Real-time forecasting</span><span>Workflow automation</span></div>
+            </div>
+            <div class="fig-stack"><figure><img src="images/hu-forecast-workflow.jpg" alt="Real-time forecasting workflow." loading="lazy"><figcaption>Real-time forecasting workflow.</figcaption></figure>
+<figure><img src="images/hu-4km-domain.jpg" alt="4-km forecasting system domain." loading="lazy"><figcaption>4-km forecasting system domain.</figcaption></figure></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="project">
+            <div>
+              <h3>Tropical cyclone–urban interaction</h3>
+              <p class="meta">Hampton University · 2025 – 2026</p>
+              <p>How do realistic urban environments affect hurricanes after landfall? This project builds a conceptual and modeling framework to examine how urban surfaces and infrastructure modulate post-landfall tropical cyclone dissipation. I led a collaborative NSF proposal on this topic in 2025.</p>
+              <div class="tags"><span>Tropical cyclones</span><span>Urban meteorology</span><span>WRF-UCM</span></div>
+            </div>
+            <div class="fig-stack"><figure><img src="images/tc-urban-conceptual.jpg" alt="Conceptual framework for tropical cyclone–urban interaction." loading="lazy"><figcaption>Conceptual framework for tropical cyclone–urban interaction.</figcaption></figure></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="project">
+            <div>
+              <h3>Urban impacts on convection over Chicago</h3>
+              <p class="meta">NC A&amp;T State University · 2022 – 2024</p>
+              <p>Using observations and multiscale numerical simulations, this two-part study examines how the city of Chicago and Lake Michigan shape the evolution of warm-season convective squall lines and their precipitation patterns (<em>Atmosphere</em>, 2025).</p>
+              <div class="tags"><span>Urban convection</span><span>Squall lines</span><span>Lake effects</span></div>
+            </div>
+            <div class="fig-stack"><figure><img src="images/urban-flow-chicago.jpg" alt="Simulated flow over urban buildings." loading="lazy"><figcaption>Simulated flow over urban buildings.</figcaption></figure></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="project">
+            <div>
+              <h3>Fire weather and wildfire-conducive environments</h3>
+              <p class="meta">NC A&amp;T State University · 2017 – 2024</p>
+              <p>My doctoral and postdoctoral work investigated the multiscale dynamics behind dangerous fire weather: the orographic processes producing downslope windstorms during the Santa Ana–driven Cedar Fire, and the convective density currents that abruptly redirected winds near the Yarnell Hill Fire, where 19 firefighters were entrapped. I developed a conceptual model describing the stages of Santa Ana wind-driven wildfire evolution, and used WRF with RCP climate scenarios to assess future wildfire-conducive environments with the USDA Forest Service.</p>
+              <div class="tags"><span>Fire weather</span><span>Downslope windstorms</span><span>Density currents</span><span>HYSPLIT</span></div>
+            </div>
+            <div class="fig-stack"><figure><img src="images/fire-conceptual-model.jpg" alt="Three-stage conceptual model of synoptic-to-mesoscale interaction." loading="lazy"><figcaption>Three-stage conceptual model of synoptic-to-mesoscale interaction.</figcaption></figure>
+<figure><img src="images/yarnell-fire.jpg" alt="Yarnell Hill Fire case study." loading="lazy"><figcaption>Yarnell Hill Fire case study.</figcaption></figure></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="project">
+            <div>
+              <h3>Tropical cyclone tracks, waves and orographic rainfall</h3>
+              <p class="meta">NC A&amp;T State University · 2017 – 2024</p>
+              <p>This line of work examines track deflection of Tropical Cyclone Sidr (2007) at landfall over Bangladesh, moist flow-regime transition and heavy orographic rainfall as typhoons cross Taiwan's Central Mountain Range, and the forcing mechanisms of African easterly waves that precede Atlantic hurricane genesis.</p>
+              <div class="tags"><span>Tropical cyclones</span><span>Orographic rainfall</span><span>African easterly waves</span></div>
+            </div>
+            <div class="fig-stack"><figure><img src="images/sidr-domains.png" alt="Model domains for the Tropical Cyclone Sidr (2007) simulations." loading="lazy"><figcaption>Model domains for the Tropical Cyclone Sidr (2007) simulations.</figcaption></figure></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2><span>Grants &amp; proposals</span></h2>
+        <div class="card">
+          <h3>NSF AI Datasets Flagship proposal <span class="badge review">In preparation</span></h3>
+          <p class="meta">Texas Tech University · PI: Brian Hirth</p>
+          <p>An integrated Texas weather, social and economic dataset for AI (working title). I am co-writing the ensemble component: TEPS ensemble curation and retention, and observation–model pairing.</p>
+        </div>
+        <div class="card">
+          <h3>Collaborative Research: Understanding and Quantifying the Dissipation of Tropical Cyclones through Realistic Urban Environments</h3>
+          <p class="meta">NSF proposal 2609729 · Hampton University · PI: S. M. S. Karim · Submitted December 2025</p>
+          <p>Led the research planning, scientific framing, methodology, and writing of a collaborative proposal on how realistic urban environments influence tropical cyclone dissipation. Not funded.</p>
+        </div>
+        <div class="card">
+          <h3>Examining the HDW Fire Weather Index by Conducting WRF-SFIRE Simulations of Wildfires over the Mountains in the Southwest U.S.</h3>
+          <p class="meta">NSF Postdoctoral Research Award AGS-1900621 · Supervisor: Dr. Yuh-Lang Lin · 2022</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar">
+          <img src="images/Google-scholar.png" alt="Google Scholar">
+        </a>
+        <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" rel="noopener" title="LinkedIn">
+          <img src="images/LinkedIn_logo.png.webp" alt="LinkedIn">
+        </a>
+        <a href="https://orcid.org/0000-0002-1100-3632" target="_blank" rel="noopener" title="ORCID">
+          <img src="images/ORCID_iD.svg.png" alt="ORCID">
+        </a>
+      </div>
+      <div class="footer-copy">
+        © 2026 Shak Md Shajedul Karim · <a href="mailto:shakkari@ttu.edu">shakkari@ttu.edu</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

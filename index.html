@@ -4,443 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shak Md Shajedul Karim, Ph.D.</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f3f3f3;
-      color: #222;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .page {
-      max-width: 1600px;
-      margin: 0 auto;
-      background: #f3f3f3;
-    }
-
-    .topbar {
-      background: #f3f3f3;
-      border-bottom: 1px solid #d7d7d7;
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand-logo {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      overflow: hidden;
-      flex-shrink: 0;
-      background: #ffffff;
-      border: 4px solid #b85c00;
-    }
-
-    .brand-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    .brand-text h1 {
-      margin: 0;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .brand-text p {
-      margin: 3px 0 0;
-      font-size: 13px;
-      font-weight: 600;
-      color: #222;
-    }
-
-    #menu-toggle {
-      display: none;
-    }
-
-    .hamburger {
-      display: none;
-      font-size: 38px;
-      color: #c00000;
-      cursor: pointer;
-      font-weight: bold;
-      line-height: 1;
-    }
-
-    .nav {
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
-      font-size: 20px;
-    }
-
-    .nav a {
-      color: #111;
-    }
-
-    .nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      width: 100%;
-      padding: 0 12px;
-      margin-top: 6px;
-    }
-
-    .hero-box {
-      position: relative;
-      width: 100%;
-      height: 520px;
-      overflow: hidden;
-      background: #d9d9d9;
-    }
-
-    .hero-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-caption {
-      position: absolute;
-      bottom: 8px;
-      right: 12px;
-      font-size: 15px;
-      font-weight: 700;
-      color: #111;
-      background: rgba(255,255,255,0.65);
-      padding: 4px 8px;
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 40px;
-      padding: 28px 70px 40px 70px;
-      align-items: start;
-    }
-
-    .sidebar {
-      padding-top: 8px;
-    }
-
-    .profile-photo {
-      width: 110px;
-      height: 140px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 6px solid #dadada;
-      background: #dcdcdc;
-      margin-bottom: 18px;
-    }
-
-    .profile-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .sidebar h2 {
-      margin: 0 0 10px;
-      font-size: 24px;
-      line-height: 1.15;
-      font-weight: 700;
-    }
-
-    .sidebar .position {
-      margin: 0 0 20px;
-      font-size: 15px;
-      color: #444;
-    }
-
-    .info-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .info-list li {
-      margin-bottom: 14px;
-    }
-
-    .info-list li,
-    .info-list li a {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #4a4a4a;
-      font-size: 16px;
-      line-height: 1.4;
-      text-decoration: none;
-    }
-
-    .info-list li a:hover {
-      text-decoration: underline;
-    }
-
-    .info-list svg {
-      width: 28px;
-      height: 28px;
-      fill: #4a4a4a;
-      flex-shrink: 0;
-    }
-
-    .main-text {
-      max-width: 860px;
-    }
-
-    .main-text h1 {
-      margin: 0 0 10px;
-      font-size: 64px;
-      text-align: center;
-      font-weight: 800;
-      color: #000;
-    }
-
-    .main-text p {
-      margin: 0 0 18px;
-      font-size: 19px;
-      line-height: 1.45;
-    }
-
-    .main-text ul {
-      margin: 10px 0 18px 24px;
-      padding: 0 0 0 18px;
-      font-size: 19px;
-      line-height: 1.45;
-    }
-
-    .main-text li {
-      margin-bottom: 8px;
-    }
-
-    .footer {
-      background: #000;
-      color: #fff;
-      padding: 18px 70px 16px 70px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .footer-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
-
-    .footer-links img {
-      height: 26px;
-      width: auto;
-      display: block;
-      object-fit: contain;
-      background: transparent;
-    }
-
-    .footer-copy {
-      font-size: 14px;
-      color: #f1f1f1;
-    }
-
-    @media (max-width: 1100px) {
-      .content {
-        grid-template-columns: 1fr;
-        padding: 28px 24px 40px 24px;
-      }
-
-      .main-text h1 {
-        text-align: left;
-        font-size: 46px;
-      }
-
-      .footer {
-        padding: 18px 24px 16px 24px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .topbar {
-        padding: 18px 22px;
-        align-items: center;
-      }
-
-      .brand {
-        max-width: 75%;
-      }
-
-      .brand-logo {
-        width: 58px;
-        height: 58px;
-      }
-
-      .brand-text h1 {
-        font-size: 24px;
-        line-height: 1.15;
-      }
-
-      .brand-text p {
-        font-size: 16px;
-        line-height: 1.25;
-      }
-
-      .hamburger {
-        display: block;
-        margin-left: auto;
-      }
-
-      .nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 12px;
-        font-size: 22px;
-        padding-top: 16px;
-      }
-
-      #menu-toggle:checked ~ .nav {
-        display: flex;
-      }
-
-      .hero {
-        padding: 0;
-        margin-top: 0;
-      }
-
-      .hero-box {
-        height: 300px;
-        width: 100%;
-      }
-
-      .hero-box img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .hero-caption {
-        font-size: 11px;
-        right: 6px;
-        bottom: 5px;
-      }
-
-      .content {
-        display: block;
-        padding: 35px 34px 45px 34px;
-      }
-
-      .sidebar {
-        display: grid;
-        grid-template-columns: 88px 1fr;
-        gap: 18px;
-        align-items: center;
-        margin-bottom: 34px;
-      }
-
-      .profile-photo {
-        width: 88px;
-        height: 88px;
-        margin-bottom: 0;
-      }
-
-      .sidebar h2 {
-        font-size: 30px;
-        margin-bottom: 6px;
-      }
-
-      .sidebar .position {
-        font-size: 22px;
-        margin-bottom: 0;
-      }
-
-      .info-list {
-        grid-column: 1 / -1;
-        margin-top: 12px;
-      }
-
-      .info-list li,
-      .info-list li a {
-        font-size: 18px;
-      }
-
-      .main-text h1 {
-        display: none;
-      }
-
-      .main-text p,
-      .main-text ul {
-        font-size: 27px;
-        line-height: 1.55;
-      }
-
-      .main-text ul {
-        margin-left: 32px;
-      }
-
-      .main-text li {
-        margin-bottom: 18px;
-      }
-
-      .footer {
-        padding: 18px 34px 24px 34px;
-      }
-    }
-  </style>
+  <meta name="description" content="Atmospheric scientist and NWP research scientist at the National Wind Institute, Texas Tech University — severe weather, ensemble forecasting, and numerical modeling." />
+  <link rel="icon" href="images/Severe-weather-Icon.jpg" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <div class="page">
 
     <header class="topbar">
-      <div class="brand">
+      <a class="brand" href="index.html">
         <div class="brand-logo">
-          <img src="images/Severe-weather-Icon.jpg" alt="Logo">
+          <img src="images/Severe-weather-Icon.jpg" alt="Severe weather logo">
         </div>
-
         <div class="brand-text">
           <h1>Shak Md Shajedul Karim (Ph.D.)</h1>
           <p>Atmospheric Scientist · Severe Weather Researcher · Numerical Modeler</p>
         </div>
-      </div>
+      </a>
 
-      <input type="checkbox" id="menu-toggle">
-
-      <label for="menu-toggle" class="hamburger">
-        ☰
-      </label>
-
-      <nav class="nav">
-        <a href="index.html">Home</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="bio.html">Bio</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
@@ -450,56 +33,26 @@
 
     <section class="hero">
       <div class="hero-box">
-        <img src="images/KH-Instability.jpg" alt="Main research image">
-        <div class="hero-caption">KH-Instability</div>
+        <img src="images/KH-Instability.jpg" alt="Kelvin–Helmholtz billow clouds">
+        <div class="hero-caption">Kelvin–Helmholtz instability</div>
       </div>
     </section>
 
     <section class="content">
       <aside class="sidebar">
         <div class="profile-photo">
-          <img src="images/Icon-Image.jpg" alt="Shak Karim">
+          <img src="images/Icon-Image.jpg" alt="Shak Md Shajedul Karim">
         </div>
 
-        <div>
-          <h2>Dr. Shak Md Shajedul Karim</h2>
-          <p class="position">Research Associate</p>
-        </div>
+        <h2>Dr. Shak Md Shajedul Karim</h2>
+        <p class="position">NWP Research Scientist<br>National Wind Institute, Texas Tech University</p>
 
         <ul class="info-list">
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 22s7-7.2 7-13a7 7 0 1 0-14 0c0 5.8 7 13 7 13zm0-9.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/>
-            </svg>
-            <span>Hampton, VA, USA</span>
-          </li>
-
-          <li>
-            <a href="mailto:skak.karim@hamptonu.edu">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.5l9 6 9-6V7H3zm18 10V9.7l-8.4 5.6a1 1 0 0 1-1.2 0L3 9.7V17h18z"/>
-              </svg>
-              <span>skak.karim@hamptonu.edu</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://cas.hamptonu.edu/facilities/severe-weather-research-center/" target="_blank">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a3 3 0 1 1 4.2 4.2l-2.1 2.1a1 1 0 1 1-1.4-1.4l2.1-2.1a1 1 0 1 0-1.4-1.4L11.9 13a1 1 0 0 1-1.3.1zm2.8-2.8a1 1 0 0 1 0 1.4L10 15.4a3 3 0 1 1-4.2-4.2l2.1-2.1a1 1 0 1 1 1.4 1.4l-2.1 2.1a1 1 0 0 0 1.4 1.4l3.4-3.4a1 1 0 0 1 1.4 0z"/>
-              </svg>
-              <span>Severe Weather Research Center</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.hamptonu.edu/" target="_blank">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a3 3 0 1 1 4.2 4.2l-2.1 2.1a1 1 0 1 1-1.4-1.4l2.1-2.1a1 1 0 1 0-1.4-1.4L11.9 13a1 1 0 0 1-1.3.1zm2.8-2.8a1 1 0 0 1 0 1.4L10 15.4a3 3 0 1 1-4.2-4.2l2.1-2.1a1 1 0 1 1 1.4 1.4l-2.1 2.1a1 1 0 0 0 1.4 1.4l3.4-3.4a1 1 0 0 1 1.4 0z"/>
-              </svg>
-              <span>Hampton University</span>
-            </a>
-          </li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-13a7 7 0 1 0-14 0c0 5.8 7 13 7 13zm0-9.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg><span>Lubbock, TX, USA</span></li>
+          <li><a href="mailto:shakkari@ttu.edu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.5l9 6 9-6V7H3zm18 10V9.7l-8.4 5.6a1 1 0 0 1-1.2 0L3 9.7V17h18z"/></svg><span>shakkari@ttu.edu</span></a></li>
+          <li><a href="https://www.depts.ttu.edu/nwi/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a3 3 0 1 1 4.2 4.2l-2.1 2.1a1 1 0 1 1-1.4-1.4l2.1-2.1a1 1 0 1 0-1.4-1.4L11.9 13a1 1 0 0 1-1.3.1zm2.8-2.8a1 1 0 0 1 0 1.4L10 15.4a3 3 0 1 1-4.2-4.2l2.1-2.1a1 1 0 1 1 1.4 1.4l-2.1 2.1a1 1 0 0 0 1.4 1.4l3.4-3.4a1 1 0 0 1 1.4 0z"/></svg><span>National Wind Institute</span></a></li>
+          <li><a href="https://www.ttu.edu/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a3 3 0 1 1 4.2 4.2l-2.1 2.1a1 1 0 1 1-1.4-1.4l2.1-2.1a1 1 0 1 0-1.4-1.4L11.9 13a1 1 0 0 1-1.3.1zm2.8-2.8a1 1 0 0 1 0 1.4L10 15.4a3 3 0 1 1-4.2-4.2l2.1-2.1a1 1 0 1 1 1.4 1.4l-2.1 2.1a1 1 0 0 0 1.4 1.4l3.4-3.4a1 1 0 0 1 1.4 0z"/></svg><span>Texas Tech University</span></a></li>
+          <li><a href="files/Karim_CV.pdf" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/></svg><span>Curriculum Vitae (PDF)</span></a></li>
         </ul>
       </aside>
 
@@ -507,45 +60,53 @@
         <h1>Welcome!</h1>
 
         <p>
-          Hi there! I am an atmospheric scientist with strong experience in running, analyzing, and validating numerical simulations using 
-          NWP models to investigate multiscale atmospheric processes, including convection, boundary layer turbulence, urban-atmosphere 
-          interaction, wildfire-conducive environments, orographic impacts, and tropical wave dynamics, etc.
+          Hi there! I am an atmospheric scientist with 9+ years of experience running, analyzing, and validating
+          numerical weather prediction (NWP) simulations. My research spans multiscale atmospheric processes,
+          including convection, boundary-layer turbulence, urban–atmosphere interaction, wildfire-conducive
+          environments, orographic effects, and tropical cyclone and tropical wave dynamics.
         </p>
 
-        <p>
-          My current work includes:
-        </p>
+        <div class="highlight">
+          <strong>Current focus: Texas Ensemble Prediction System (TEPS)</strong>
+          At the National Wind Institute I develop and maintain TEPS, a 100-member, 2-km convection-allowing
+          WRF ensemble that produces 48-hour severe-weather forecasts for Texas, and I lead its move from a
+          validated retrospective system into real-time operations.
+        </div>
+
+        <p>My current and recent work includes:</p>
 
         <ul>
-          <li>Doppler radar wind retrieval and radar simulator development</li>
-          <li>Satellite-assimilated severe weather forecasting</li>
-          <li>Tropical cyclone and urban interaction</li>
+          <li>Convection-allowing ensemble design, operations, and probabilistic forecast products</li>
+          <li>Doppler radar wind retrieval and LES-based radar simulator development</li>
+          <li>Satellite-assimilated severe-weather forecasting</li>
+          <li>Tropical cyclone–urban interaction</li>
           <li>Large-eddy simulation of convection and turbulence</li>
         </ul>
 
         <p>
-          To better understand complex, multi-scale weather processes and support real-time forecasting applications, I use a variety of datasets and methods including high-resolution numerical models, atmospheric observations, radar and satellite remote sensing.
+          To understand complex, multiscale weather and support real-time forecasting, I combine high-resolution
+          numerical models with atmospheric observations and radar and satellite remote sensing, and I work closely
+          with NWS forecasters and emergency managers on how forecast products are used.
         </p>
+
+        <p><a class="btn" href="research.html">Explore my research</a> &nbsp; <a class="btn ghost" href="publications.html">Publications</a></p>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer-links">
-        <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&hl=en" target="_blank" title="Google Scholar">
+        <a href="https://scholar.google.com/citations?user=-I5v0hgAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar">
           <img src="images/Google-scholar.png" alt="Google Scholar">
         </a>
-
-        <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/s-m-shajedul-karim-ph-d-62416b153/" target="_blank" rel="noopener" title="LinkedIn">
           <img src="images/LinkedIn_logo.png.webp" alt="LinkedIn">
         </a>
-
-        <a href="https://orcid.org/0000-0002-1100-3632" target="_blank" title="ORCID">
+        <a href="https://orcid.org/0000-0002-1100-3632" target="_blank" rel="noopener" title="ORCID">
           <img src="images/ORCID_iD.svg.png" alt="ORCID">
         </a>
       </div>
-
       <div class="footer-copy">
-        © 2026 Shak Md Shajedul Karim.
+        © 2026 Shak Md Shajedul Karim · <a href="mailto:shakkari@ttu.edu">shakkari@ttu.edu</a>
       </div>
     </footer>
 
