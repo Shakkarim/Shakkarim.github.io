@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#fff"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M34 152 C78 140 112 116 176 120" stroke="#c3ceda" stroke-width="3.5"/>
+    <path d="M34 152 C78 138 116 110 174 96"  stroke="#9fb0c3" stroke-width="3.5"/>
+    <path d="M34 152 C76 138 110 100 168 42"  stroke="#9fb0c3" stroke-width="3.5"/>
+    <path d="M34 152 C78 138 114 108 172 74"  stroke="#4f6d8a" stroke-width="3.5"/>
+    <path d="M34 152 C76 140 108 104 170 56"  stroke="#1f3a5f" stroke-width="3.5"/>
+    <path d="M34 152 C78 139 112 106 172 64"  stroke="#d0161b" stroke-width="6.5"/>
+  </g>
+  <circle cx="34" cy="152" r="6" fill="#d0161b"/>
+  <text x="70" y="98" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="46" letter-spacing="-1" fill="#1f3a5f">SK</text>
+</svg>
