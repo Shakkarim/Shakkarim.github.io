@@ -35,10 +35,10 @@ a { text-decoration: none; color: inherit; }
 }
 .brand { display: flex; align-items: center; gap: 14px; }
 .brand-logo {
-  width: 56px; height: 56px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
-  background: #fff; border: 4px solid var(--accent);
+  width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
+  background: #fff; border: 4px solid #d0161b;
 }
-.brand-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.brand-logo img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 2px; }
 .brand-text h1 { margin: 0; font-size: 20px; font-weight: 700; line-height: 1.15; }
 .brand-text p { margin: 3px 0 0; font-size: 13px; font-weight: 600; color: var(--ink); }
 
