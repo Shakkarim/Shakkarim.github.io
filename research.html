@@ -6,7 +6,7 @@
   <title>Research · Shak Md Shajedul Karim, Ph.D.</title>
   <meta name="description" content="Research projects: TEPS ensemble forecasting, Doppler radar wind retrieval, LES, tropical cyclone–urban interaction, fire weather." />
   <link rel="icon" href="images/sk-favicon.png" />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
   <div class="page">
@@ -22,7 +22,11 @@
         </div>
       </a>
 
-      <nav class="nav" aria-label="Main">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="bio.html">Bio</a>
         <a href="research.html" class="active" aria-current="page">Research</a>
@@ -176,5 +180,18 @@
     </footer>
 
   </div>
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
 </body>
 </html>
