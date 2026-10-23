@@ -291,3 +291,38 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 6px; line-height:
   .project figure img { max-height: 260px; }
   .footer { padding: 16px 18px; }
 }
+
+/* ---------- Research jump links ---------- */
+html { scroll-behavior: smooth; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.jump a {
+  font-size: 14px; font-weight: 700; color: var(--accent-dark); background: #fff;
+  border: 1px solid #e6cdb5; border-radius: 999px; padding: 6px 12px;
+}
+.jump a:hover { background: #fbefe3; }
+.card[id], h2[id] { scroll-margin-top: 20px; }
+
+/* ---------- Tap-to-enlarge figures ---------- */
+img.zoomable { cursor: zoom-in; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000; background: rgba(10,14,20,.92);
+  display: none; flex-direction: column; align-items: center; justify-content: center; padding: 16px;
+}
+.lightbox.show { display: flex; }
+.lightbox-scroll { max-width: 100%; max-height: calc(100vh - 110px); overflow: auto; touch-action: pinch-zoom pan-x pan-y; }
+.lightbox-scroll img { display: block; max-width: min(1400px, calc(100vw - 32px)); max-height: calc(100vh - 110px); width: auto; height: auto; background: #fff; border-radius: 4px; cursor: zoom-out; }
+.lightbox-cap { color: #e8e8e8; font-size: 15px; line-height: 1.4; max-width: 900px; text-align: center; margin: 12px 0 0; }
+.lightbox-close {
+  position: absolute; top: 10px; right: 14px; width: 44px; height: 44px; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.15); color: #fff; font-size: 30px; line-height: 44px; cursor: pointer;
+}
+body.no-scroll { overflow: hidden; }
+
+/* ---------- Phones: sticky header + horizontal jump bar ---------- */
+@media (max-width: 760px) {
+  .topbar { position: sticky; top: 0; z-index: 100; background: var(--bg); }
+  .card[id], h2[id] { scroll-margin-top: 84px; }
+  .jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px -18px 0; padding: 0 18px 6px; scrollbar-width: none; }
+  .jump::-webkit-scrollbar { display: none; }
+  .jump a { flex-shrink: 0; }
+}

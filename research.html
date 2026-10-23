@@ -6,7 +6,7 @@
   <title>Research · Shak Md Shajedul Karim, Ph.D.</title>
   <meta name="description" content="Research projects: TEPS ensemble forecasting, Doppler radar wind retrieval, LES, tropical cyclone–urban interaction, fire weather." />
   <link rel="icon" href="images/sk-favicon.png" />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
   <div class="page">
@@ -38,13 +38,14 @@
     <section class="page-head">
       <h1>Research</h1>
       <p>I study multiscale severe-weather processes with high-resolution numerical models, radar and satellite observations, and build forecasting systems that turn that science into operational guidance.</p>
+      <nav class="jump" aria-label="Jump to project"><a href="#teps">TEPS</a><a href="#radar">Radar retrieval</a><a href="#les">LES</a><a href="#forecasting">Forecasting</a><a href="#tc-urban">TC–urban</a><a href="#chicago">Chicago</a><a href="#fire">Fire weather</a><a href="#cyclones">Cyclones &amp; rainfall</a><a href="#grants">Grants</a></nav>
     </section>
 
     <main class="wrap">
       <section class="section">
         <h2><span>Current &amp; recent projects</span></h2>
 
-        <article class="card">
+        <article class="card" id="teps">
           <div class="project">
             <div>
               <h3>Texas Ensemble Prediction System (TEPS)</h3>
@@ -54,13 +55,13 @@
               <div class="tags"><span>Convection-allowing ensembles</span><span>WRF</span><span>Probabilistic forecasting</span><span>HPC operations</span><span>Forecast products</span></div>
             </div>
             <div class="logo-stack">
-              <img src="images/tps-logo-large.jpg" alt="TPS — Texas Prediction System logo" loading="lazy" class="tps">
-              <a href="https://www.depts.ttu.edu/nwi/" target="_blank" rel="noopener"><img src="images/nwi-logo.png" alt="National Wind Institute, Texas Tech University" loading="lazy" class="nwi"></a>
+              <img src="images/tps-logo-large.jpg" alt="TPS — Texas Prediction System logo" class="tps">
+              <a href="https://www.depts.ttu.edu/nwi/" target="_blank" rel="noopener"><img src="images/nwi-logo.png" alt="National Wind Institute, Texas Tech University" class="nwi"></a>
             </div>
             
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="radar">
           <div class="project wide-fig">
             <div>
               <h3>Multi-Doppler radar wind retrieval for turbulent convection</h3>
@@ -69,11 +70,11 @@
 <p>This work is published in <em>Remote Sensing</em> (2026) and supports observation of severe weather with the Skyler-II phased-array radar.</p>
               <div class="tags"><span>Doppler radar</span><span>Wind retrieval</span><span>Radar simulator</span><span>Uncertainty quantification</span></div>
             </div>
-            <div class="fig-stack pair" style="--h:288px"><figure><div class="box"><img src="images/radar-retrieval-flowchart.png" alt="Retrieval framework: from LES truth to simulated radar observations and retrieved winds." loading="lazy"></div><figcaption>Retrieval framework: from LES truth to simulated radar observations and retrieved winds.</figcaption></figure>
-<figure><div class="box"><img src="images/multi-doppler-layout.png" alt="Multi-Doppler radar layout used in the retrieval experiments." loading="lazy"></div><figcaption>Multi-Doppler radar layout used in the retrieval experiments.</figcaption></figure></div>
+            <div class="fig-stack pair" style="--h:288px"><figure><div class="box"><img src="images/radar-retrieval-flowchart.png" alt="Retrieval framework: from LES truth to simulated radar observations and retrieved winds."></div><figcaption>Retrieval framework: from LES truth to simulated radar observations and retrieved winds.</figcaption></figure>
+<figure><div class="box"><img src="images/multi-doppler-layout.png" alt="Multi-Doppler radar layout used in the retrieval experiments."></div><figcaption>Multi-Doppler radar layout used in the retrieval experiments.</figcaption></figure></div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="les">
           <div class="project">
             <div>
               <h3>Large-eddy simulation of convection and boundary-layer turbulence</h3>
@@ -81,10 +82,10 @@
               <p>High-resolution LES experiments resolve boundary-layer turbulence and convective eddies, providing the turbulent fields that drive the radar simulator and a testbed for how well turbulence statistics such as TKE can be recovered from radar observations.</p>
               <div class="tags"><span>WRF-LES</span><span>Turbulence</span><span>TKE</span></div>
             </div>
-            <div class="fig-stack"><figure><img src="images/les-tke-profile.png" alt="Vertical profile of turbulent kinetic energy from the LES experiments." loading="lazy"><figcaption>Vertical profile of turbulent kinetic energy from the LES experiments.</figcaption></figure></div>
+            <div class="fig-stack"><figure><img src="images/les-tke-profile.png" alt="Vertical profile of turbulent kinetic energy from the LES experiments."><figcaption>Vertical profile of turbulent kinetic energy from the LES experiments.</figcaption></figure></div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="forecasting">
           <div class="project wide-fig">
             <div>
               <h3>Satellite-assimilated severe-weather forecasting</h3>
@@ -92,11 +93,11 @@
               <p>I operated and upgraded a real-time, satellite-assimilated severe-weather forecasting system, building forecast-oriented workflows in Python, Bash, and Slurm on HPC resources.</p>
               <div class="tags"><span>Data assimilation</span><span>Real-time forecasting</span><span>Workflow automation</span></div>
             </div>
-            <div class="fig-stack pair" style="--h:148px"><figure><div class="box"><img src="images/hu-forecast-workflow.jpg" alt="Real-time forecasting workflow." loading="lazy"></div><figcaption>Real-time forecasting workflow.</figcaption></figure>
-<figure><div class="box"><img src="images/hu-4km-domain.jpg" alt="4-km forecasting system domain with the Skyler radar site" loading="lazy"></div><figcaption>4-km forecasting system domain, with the Skyler radar site.</figcaption></figure></div>
+            <div class="fig-stack pair" style="--h:148px"><figure><div class="box"><img src="images/hu-forecast-workflow.jpg" alt="Real-time forecasting workflow."></div><figcaption>Real-time forecasting workflow.</figcaption></figure>
+<figure><div class="box"><img src="images/hu-4km-domain.jpg" alt="4-km forecasting system domain with the Skyler radar site"></div><figcaption>4-km forecasting system domain, with the Skyler radar site.</figcaption></figure></div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="tc-urban">
           <div class="project">
             <div>
               <h3>Tropical cyclone–urban interaction</h3>
@@ -104,10 +105,10 @@
               <p>How do realistic urban environments affect hurricanes after landfall? This project builds a conceptual and modeling framework to examine how urban surfaces and infrastructure modulate post-landfall tropical cyclone dissipation. I led a collaborative NSF proposal on this topic in 2025.</p>
               <div class="tags"><span>Tropical cyclones</span><span>Urban meteorology</span><span>WRF-UCM</span></div>
             </div>
-            <div class="fig-stack"><figure><img src="images/tc-urban-conceptual.jpg" alt="Conceptual framework for tropical cyclone–urban interaction." loading="lazy"><figcaption>Conceptual framework for tropical cyclone–urban interaction.</figcaption></figure></div>
+            <div class="fig-stack"><figure><img src="images/tc-urban-conceptual.jpg" alt="Conceptual framework for tropical cyclone–urban interaction."><figcaption>Conceptual framework for tropical cyclone–urban interaction.</figcaption></figure></div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="chicago">
           <div class="project">
             <div>
               <h3>Urban impacts on convection over Chicago</h3>
@@ -115,10 +116,10 @@
               <p>Using observations and multiscale numerical simulations, this two-part study examines how the city of Chicago and Lake Michigan shape the evolution of warm-season convective squall lines and their precipitation patterns (<em>Atmosphere</em>, 2025).</p>
               <div class="tags"><span>Urban convection</span><span>Squall lines</span><span>Lake effects</span></div>
             </div>
-            <div class="fig-stack"><figure><img src="images/urban-flow-chicago.jpg" alt="Simulated flow over urban buildings." loading="lazy"><figcaption>Simulated flow over urban buildings.</figcaption></figure></div>
+            <div class="fig-stack"><figure><img src="images/urban-flow-chicago.jpg" alt="Simulated flow over urban buildings."><figcaption>Simulated flow over urban buildings.</figcaption></figure></div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="fire">
           <div class="project wide-fig">
             <div>
               <h3>Fire weather and wildfire-conducive environments</h3>
@@ -126,11 +127,11 @@
               <p>My doctoral and postdoctoral work investigated the multiscale dynamics behind dangerous fire weather: the orographic processes producing downslope windstorms during the Santa Ana–driven Cedar Fire, and the convective density currents that abruptly redirected winds near the Yarnell Hill Fire, where 19 firefighters were entrapped. I developed a conceptual model describing the stages of Santa Ana wind-driven wildfire evolution, and used WRF with RCP climate scenarios to assess future wildfire-conducive environments with the USDA Forest Service.</p>
               <div class="tags"><span>Fire weather</span><span>Downslope windstorms</span><span>Density currents</span><span>HYSPLIT</span></div>
             </div>
-            <div class="fig-stack pair" style="--h:272px"><figure><div class="box"><img src="images/fire-conceptual-model.jpg" alt="Three-stage conceptual model of synoptic-to-mesoscale interaction." loading="lazy"></div><figcaption>Three-stage conceptual model of synoptic-to-mesoscale interaction.</figcaption></figure>
-<figure><div class="box"><img src="images/yarnell-fire.jpg" alt="Yarnell Hill Fire case study." loading="lazy"></div><figcaption>Yarnell Hill Fire case study.</figcaption></figure></div>
+            <div class="fig-stack pair" style="--h:272px"><figure><div class="box"><img src="images/fire-conceptual-model.jpg" alt="Three-stage conceptual model of synoptic-to-mesoscale interaction."></div><figcaption>Three-stage conceptual model of synoptic-to-mesoscale interaction.</figcaption></figure>
+<figure><div class="box"><img src="images/yarnell-fire.jpg" alt="Yarnell Hill Fire case study."></div><figcaption>Yarnell Hill Fire case study.</figcaption></figure></div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="cyclones">
           <div class="project">
             <div>
               <h3>Tropical cyclone tracks, waves and orographic rainfall</h3>
@@ -138,13 +139,13 @@
               <p>This line of work examines track deflection of Tropical Cyclone Sidr (2007) at landfall over Bangladesh, moist flow-regime transition and heavy orographic rainfall as typhoons cross Taiwan's Central Mountain Range, and the forcing mechanisms of African easterly waves that precede Atlantic hurricane genesis.</p>
               <div class="tags"><span>Tropical cyclones</span><span>Orographic rainfall</span><span>African easterly waves</span></div>
             </div>
-            <div class="fig-stack"><figure><img src="images/sidr-track.png" alt="Observed (JTWC) and simulated tracks of Tropical Cyclone Sidr (2007)" loading="lazy"><figcaption>Tropical Cyclone Sidr (2007): observed JTWC track compared with the simulated tracks from the control (CNTL) and C0-F experiments.</figcaption></figure></div>
+            <div class="fig-stack"><figure><img src="images/sidr-track.png" alt="Observed (JTWC) and simulated tracks of Tropical Cyclone Sidr (2007)"><figcaption>Tropical Cyclone Sidr (2007): observed JTWC track compared with the simulated tracks from the control (CNTL) and C0-F experiments.</figcaption></figure></div>
           </div>
         </article>
       </section>
 
       <section class="section">
-        <h2><span>Grants &amp; proposals</span></h2>
+        <h2 id="grants"><span>Grants &amp; proposals</span></h2>
         <div class="card">
           <h3>NSF AI Datasets Flagship proposal <span class="badge review">In preparation</span></h3>
           <p class="meta">Texas Tech University · PI: Brian Hirth</p>
@@ -180,18 +181,6 @@
     </footer>
 
   </div>
-  <script>
-    (function () {
-      var btn = document.querySelector('.menu-toggle');
-      var nav = document.getElementById('site-nav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', function () {
-        var open = nav.classList.toggle('open');
-        btn.classList.toggle('open', open);
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      });
-    })();
-  </script>
+  <script src="site.js?v=1"></script>
 </body>
 </html>
