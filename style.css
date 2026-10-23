@@ -376,3 +376,10 @@ body.no-scroll { overflow: hidden; }
   .lightbox-nav.next { right: 6px; }
   .lightbox-scroll img { max-width: calc(100vw - 32px); }
 }
+
+/* Section titles: one accent underline even when the title wraps onto two lines */
+.section > h2 { padding-bottom: 0; line-height: 1.25; }
+.section > h2 span {
+  display: inline-block; padding-bottom: 8px; margin-bottom: -2px;
+  border-bottom: 3px solid var(--accent);
+}
