@@ -339,3 +339,9 @@ body.no-scroll { overflow: hidden; }
   display: inline-block; font-size: 12px; font-weight: 700; color: #fff; background: #2e8b57;
   border-radius: 999px; padding: 2px 9px; margin-right: 8px; vertical-align: 1px;
 }
+
+.timeline p.award-note {
+  display: inline-block; margin-top: 8px; padding: 6px 12px; font-size: 15px; color: #7a5b00;
+  background: #fff6d6; border: 1px solid #f0d77a; border-radius: 6px;
+}
+.timeline p.award-note strong { color: #5c4300; }
