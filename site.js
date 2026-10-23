@@ -41,3 +41,17 @@
   box.addEventListener('click', function (e) { if (e.target !== big) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
+
+/* Back-to-top button: appears after scrolling down, returns to the top of the page */
+(function () {
+  var b = document.createElement('button');
+  b.className = 'to-top'; b.type = 'button'; b.setAttribute('aria-label', 'Back to top');
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"/></svg><span>Top</span>';
+  document.body.appendChild(b);
+  function update() { b.classList.toggle('show', window.scrollY > 500); }
+  window.addEventListener('scroll', update, { passive: true }); update();
+  b.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  });
+})();

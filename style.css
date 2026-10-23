@@ -345,3 +345,16 @@ body.no-scroll { overflow: hidden; }
   background: #fff6d6; border: 1px solid #f0d77a; border-radius: 6px;
 }
 .timeline p.award-note strong { color: #5c4300; }
+
+/* ---------- Back to top ---------- */
+.to-top {
+  position: fixed; right: 20px; bottom: 22px; z-index: 900;
+  display: flex; align-items: center; gap: 6px; padding: 10px 14px 10px 12px;
+  background: var(--accent); color: #fff; border: 0; border-radius: 999px; cursor: pointer;
+  font: 700 14px Arial, Helvetica, sans-serif; box-shadow: 0 6px 16px rgba(0,0,0,.18);
+  opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .2s, transform .2s;
+}
+.to-top svg { width: 18px; height: 18px; fill: #fff; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { background: var(--accent-dark); }
+@media (max-width: 760px) { .to-top { right: 14px; bottom: 16px; padding: 11px; } .to-top span { display: none; } }
