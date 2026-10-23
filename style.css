@@ -358,3 +358,21 @@ body.no-scroll { overflow: hidden; }
 .to-top.show { opacity: 1; transform: none; pointer-events: auto; }
 .to-top:hover { background: var(--accent-dark); }
 @media (max-width: 760px) { .to-top { right: 14px; bottom: 16px; padding: 11px; } .to-top span { display: none; } }
+
+/* Lightbox previous / next */
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 52px; height: 52px; border: 0; border-radius: 50%; cursor: pointer;
+  background: rgba(255,255,255,.16); color: #fff; font-size: 40px; line-height: 48px; padding: 0;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,.3); }
+.lightbox-nav.prev { left: 16px; }
+.lightbox-nav.next { right: 16px; }
+.lightbox-count { color: #b8c2cc; font-size: 13px; margin: 4px 0 0; }
+.lightbox-scroll img { max-width: min(1400px, calc(100vw - 160px)); }
+@media (max-width: 760px) {
+  .lightbox-nav { width: 40px; height: 40px; font-size: 30px; line-height: 36px; background: rgba(0,0,0,.45); }
+  .lightbox-nav.prev { left: 6px; }
+  .lightbox-nav.next { right: 6px; }
+  .lightbox-scroll img { max-width: calc(100vw - 32px); }
+}
