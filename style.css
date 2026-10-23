@@ -5,8 +5,10 @@
   --ink: #222;
   --muted: #4a4a4a;
   --line: #d7d7d7;
-  --accent: #b85c00;      /* burnt orange — matches the logo ring */
-  --accent-dark: #8a4500;
+  --accent: #1f6fb2;      /* storm blue — pairs with the navy logo */
+  --accent-dark: #155088;
+  --accent-tint: #e7f0f9;
+  --accent-line: #bcd3ea;
 }
 
 * { box-sizing: border-box; }
@@ -122,7 +124,7 @@ a { text-decoration: none; color: inherit; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .tags span {
   font-size: 13px; font-weight: 600; color: var(--accent-dark);
-  background: #fbefe3; border-radius: 999px; padding: 4px 10px;
+  background: var(--accent-tint); border-radius: 999px; padding: 4px 10px;
 }
 
 figure { margin: 0; }
@@ -297,9 +299,9 @@ html { scroll-behavior: smooth; }
 .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .jump a {
   font-size: 14px; font-weight: 700; color: var(--accent-dark); background: #fff;
-  border: 1px solid #e6cdb5; border-radius: 999px; padding: 6px 12px;
+  border: 1px solid var(--accent-line); border-radius: 999px; padding: 6px 12px;
 }
-.jump a:hover { background: #fbefe3; }
+.jump a:hover { background: var(--accent-tint); }
 .card[id], h2[id] { scroll-margin-top: 20px; }
 
 /* ---------- Tap-to-enlarge figures ---------- */
